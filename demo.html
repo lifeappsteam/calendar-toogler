@@ -1,0 +1,35 @@
+<html>
+  <head>
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.6.6/dist/vue.js"></script>
+    <script>
+      window.vue = window.Vue
+    </script>
+    <script src="/dist/calendar-toogler.js"></script>
+  </head>
+  <body>
+    Hello
+    <div id="controller">
+      <calendar-toogler :year="2019" :month="3" @click-day="log" @hover-day="log"></calendar-toogler>
+      <calendar-toogler :year="2019" :month="4"></calendar-toogler>
+      <calendar-toogler :year="2019" :month="5"></calendar-toogler>
+      <calendar-toogler :year="2019" :month="6"></calendar-toogler>
+      <calendar-toogler :year="2019" :month="7"></calendar-toogler>
+    </div>
+    <script>
+      new Vue({
+        el: '#controller',
+        data: function() {
+          return {
+            year: 2019,
+            month: 3
+          }
+        },
+        methods: {
+          log: function(e) {
+            console.log(e)
+          }
+        }
+      })
+    </script>
+  </body>
+</html>

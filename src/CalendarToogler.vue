@@ -16,12 +16,14 @@
             'appended': true,
             'day': true,
             'actionable': true,
-            'tooltip-target': true,
             'active': dayInSet(day, activeDates),
             'other-month': day.monthIndex + 1 !== month }"
             v-for="day in week"
-            v-tooltip
-            :key="day.id">
+            :key="day.id"
+            @click='clicked'
+            @mouseenter="(e) => hovered(e, 'enter')"
+            @mouseleave="(e) => hovered(e, 'leave')"
+            >
             <div class="badge" v-show="dayInSet(day, badgedDates)"></div>
             {{day.day}}
           </div>
@@ -33,7 +35,6 @@
 <script>
 import * as JsonCalendar from 'json-calendar'
 import Vue from 'vue'
-import { VTooltip, VOpenOpover, VPopover, VClosePopover } from 'v-tooltip'
 
 export default {
   name: 'calendar-toogler',
@@ -42,13 +43,6 @@ export default {
     month: Number,
     badgedDates: Array,
     activeDates: Array
-  },
-  directives: {
-    'close-popover': VClosePopover,
-    'tooltip': VTooltip
-  },
-  components: {
-    'v-popover': VPopover
   },
   data () {
     return {
@@ -61,7 +55,7 @@ export default {
     }
   },
   created() {
-    console.log(this.calendar)
+    this.$emit('calendar-start', this.calendar)
   },
   methods: {
     getMonthName() {
@@ -70,6 +64,17 @@ export default {
     dayInSet(day, set) {
       let simpleDate = new Date(day.year, day.monthIndex, day.day)
       return (set || []).map(d => d.getTime()).indexOf(simpleDate.getTime()) >= 0
+    },
+    clicked (e) {
+      this.$emit('click-day', {
+        target: e.currentTarget
+      })
+    },
+    hovered (e, hoverType) {
+      this.$emit('hover-day', {
+        target: e.currentTarget,
+        hoverType
+      })
     }
   },
   computed: {
@@ -88,7 +93,6 @@ export default {
   @dayPadding: 0.1rem;
   @dayMarging: 0.3rem;
   @fontFamily: "Open Sans", Helvetica, Arial, sans-serif;
-
   @monthPadding: 0.4rem;
 
   .root {
