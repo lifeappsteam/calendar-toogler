@@ -1,30 +1,30 @@
 <template>
-  <div class="root">
-    <div class="title">{{title}}</div>
-    <div class="month">
-      <div class="row">
-        <div class="day header">D</div>
-        <div class="day header">S</div>
-        <div class="day header">T</div>
-        <div class="day header">Q</div>
-        <div class="day header">Q</div>
-        <div class="day header">S</div>
-        <div class="day header">S</div>
+  <div class="calendar-toogler-root">
+    <div class="calendar-toogler-title">{{title}}</div>
+    <div class="calendar-toogler-month">
+      <div class="calendar-toogler-week-line">
+        <div class="calendar-toogler-day calendar-toogler-header">D</div>
+        <div class="calendar-toogler-day calendar-toogler-header">S</div>
+        <div class="calendar-toogler-day calendar-toogler-header">T</div>
+        <div class="calendar-toogler-day calendar-toogler-header">Q</div>
+        <div class="calendar-toogler-day calendar-toogler-header">Q</div>
+        <div class="calendar-toogler-day calendar-toogler-header">S</div>
+        <div class="calendar-toogler-day calendar-toogler-header">S</div>
       </div>
-      <div class="row" v-for="(week, i) in weekSet" :key="i">
+      <div class="calendar-toogler-week-line" v-for="(week, i) in weekSet" :key="i">
           <div :class="{
-            'appended': true,
-            'day': true,
-            'actionable': true,
-            'active': dayInSet(day, activeDates),
-            'other-month': day.monthIndex + 1 !== month }"
+            'calendar-toogler-appended': true,
+            'calendar-toogler-day': true,
+            'calendar-toogler-actionable': true,
+            'calendar-toogler-active': dayInSet(day, activeDates),
+            'calendar-toogler-other-month': day.monthIndex + 1 !== month }"
             v-for="day in week"
             :key="day.id"
             @click='clicked'
             @mouseenter="(e) => hovered(e, 'enter')"
             @mouseleave="(e) => hovered(e, 'leave')"
             >
-            <div class="badge" v-show="dayInSet(day, badgedDates)"></div>
+            <div class="calendar-toogler-badge" v-show="dayInSet(day, badgedDates)"></div>
             {{day.day}}
           </div>
       </div>
@@ -95,37 +95,37 @@ export default {
   @fontFamily: "Open Sans", Helvetica, Arial, sans-serif;
   @monthPadding: 0.4rem;
 
-  .root {
+  .calendar-toogler-root {
     font-family: @fontFamily;
     font-size: 16px;
     display: inline-block;
     margin: 10px;
   }
-  .month {
+  .calendar-toogler-month {
     border: 0px solid blue;
     width: calc((@daySize + @dayPadding + @dayMarging) * 7 + 1rem);
     padding: @monthPadding;
   }
-  .row {
+  .calendar-toogler-week-line {
     display: flex;
   }
-  .title {
+  .calendar-toogler-title {
     font-weight: Bold;
     padding-left: 1rem;
   }
-  .day {
+  .calendar-toogler-day {
     flex: 1;
-    &.actionable {
+    &.calendar-toogler-actionable {
       cursor: pointer;
     }
-    &.active {
+    &.calendar-toogler-active {
       border-color: green;
     }
-    &.header {
+    &.calendar-toogler-header {
       color: #adadad;
       border: 0px;
     }
-    &.other-month {
+    &.calendar-toogler-other-month {
       visibility: hidden;
     }
     font-size: calc(@daySize * 0.5);
@@ -143,7 +143,7 @@ export default {
     width: @daySize;
     height: @daySize;
     display: inline-block;
-    .badge {
+    .calendar-toogler-badge {
       width: 8px;
       height: 8px;
       background: gold;
