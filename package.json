@@ -1,6 +1,6 @@
 {
-  "name": "@lifeappsteam/calendar-toogler",
-  "description": "A Vue.js project",
+  "name": "calendar-toogler",
+  "description": "A simple calendar component",
   "version": "1.0.1",
   "author": "Daniel Melo <danielmelogpi@gmail.com>",
   "license": "MIT",
@@ -33,8 +33,5 @@
     "vue-template-compiler": "^2.4.4",
     "webpack": "^3.6.0",
     "webpack-dev-server": "^2.9.1"
-  },
-  "publishConfig": {
-    "registry": "https://nexus01.lifeapps.com.br/repository/npm-private-lifeapps/"
   }
 }
