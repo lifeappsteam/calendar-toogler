@@ -89,11 +89,11 @@ export default {
 </script>
 
 <style lang="less" scoped>
-  @daySize: 1.5rem;
-  @dayPadding: 0.1rem;
-  @dayMarging: 0.3rem;
+  @daySize: 20px;
+  @dayPadding: 4px;
+  @dayMarging: 3px;
   @fontFamily: "Open Sans", Helvetica, Arial, sans-serif;
-  @monthPadding: 0.4rem;
+  @monthPadding: 10px;
 
   .calendar-toogler-root {
     font-family: @fontFamily;
@@ -103,7 +103,7 @@ export default {
   }
   .calendar-toogler-month {
     border: 0px solid blue;
-    width: calc((@daySize + @dayPadding + @dayMarging) * 7 + 1rem);
+    width: calc((@daySize + @dayPadding + @dayMarging) * 7 + 10px);
     padding: @monthPadding;
   }
   .calendar-toogler-week-line {
@@ -111,7 +111,7 @@ export default {
   }
   .calendar-toogler-title {
     font-weight: Bold;
-    padding-left: 1rem;
+    padding-left: 16px;
   }
   .calendar-toogler-day {
     flex: 1;
@@ -129,7 +129,7 @@ export default {
       visibility: hidden;
     }
     font-size: calc(@daySize * 0.5);
-    line-height: 1.1rem;
+    line-height: 11px;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     box-sizing: border-box;
     justify-self: start;
@@ -141,7 +141,7 @@ export default {
     padding: @dayPadding;
     margin: @dayMarging;
     width: @daySize;
-    height: @daySize;
+    height: calc(@daySize + 2px);
     display: inline-block;
     .calendar-toogler-badge {
       width: 8px;
@@ -149,10 +149,10 @@ export default {
       background: gold;
       margin-bottom: 1em;
       float: right;
-      margin-right: -3px;
-      border-radius: 1em;
+      margin-right: -6px;
+      border-radius: 16px;
       margin-left: -8px;
-      margin-top: -3px;
+      margin-top: -6px;
     }
   }
 </style>
