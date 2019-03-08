@@ -209,7 +209,7 @@ if (typeof window !== 'undefined' && window.Vue) {
 "use strict";
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__babel_loader_node_modules_vue_loader_lib_selector_type_script_index_0_CalendarToogler_vue__ = __webpack_require__(1);
 /* unused harmony namespace reexport */
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__node_modules_vue_loader_lib_template_compiler_index_id_data_v_37f15fd0_hasScoped_true_buble_transforms_node_modules_vue_loader_lib_selector_type_template_index_0_CalendarToogler_vue__ = __webpack_require__(15);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__node_modules_vue_loader_lib_template_compiler_index_id_data_v_d5ae1d0a_hasScoped_true_buble_transforms_node_modules_vue_loader_lib_selector_type_template_index_0_CalendarToogler_vue__ = __webpack_require__(15);
 function injectStyle (ssrContext) {
   __webpack_require__(4)
 }
@@ -224,12 +224,12 @@ var __vue_template_functional__ = false
 /* styles */
 var __vue_styles__ = injectStyle
 /* scopeId */
-var __vue_scopeId__ = "data-v-37f15fd0"
+var __vue_scopeId__ = "data-v-d5ae1d0a"
 /* moduleIdentifier (server only) */
 var __vue_module_identifier__ = null
 var Component = normalizeComponent(
   __WEBPACK_IMPORTED_MODULE_0__babel_loader_node_modules_vue_loader_lib_selector_type_script_index_0_CalendarToogler_vue__["a" /* default */],
-  __WEBPACK_IMPORTED_MODULE_1__node_modules_vue_loader_lib_template_compiler_index_id_data_v_37f15fd0_hasScoped_true_buble_transforms_node_modules_vue_loader_lib_selector_type_template_index_0_CalendarToogler_vue__["a" /* default */],
+  __WEBPACK_IMPORTED_MODULE_1__node_modules_vue_loader_lib_template_compiler_index_id_data_v_d5ae1d0a_hasScoped_true_buble_transforms_node_modules_vue_loader_lib_selector_type_template_index_0_CalendarToogler_vue__["a" /* default */],
   __vue_template_functional__,
   __vue_styles__,
   __vue_scopeId__,
@@ -250,7 +250,7 @@ var content = __webpack_require__(5);
 if(typeof content === 'string') content = [[module.i, content, '']];
 if(content.locals) module.exports = content.locals;
 // add the styles to the DOM
-var update = __webpack_require__(7)("04a489de", content, true, {});
+var update = __webpack_require__(7)("d6dfbdea", content, true, {});
 
 /***/ }),
 /* 5 */
@@ -261,7 +261,7 @@ exports = module.exports = __webpack_require__(6)(false);
 
 
 // module
-exports.push([module.i, ".root[data-v-37f15fd0]{font-family:Open Sans,Helvetica,Arial,sans-serif;font-size:16px;display:inline-block;margin:10px}.month[data-v-37f15fd0]{border:0 solid blue;width:14.3rem;padding:.4rem}.row[data-v-37f15fd0]{display:flex}.title[data-v-37f15fd0]{font-weight:Bold;padding-left:1rem}.day[data-v-37f15fd0]{flex:1;font-size:0.75rem;line-height:1.1rem;font-family:Segoe UI,Tahoma,Geneva,Verdana,sans-serif;box-sizing:border-box;justify-self:start;text-align:center;border-radius:1.5rem;border:2px solid #f08080;padding:.1rem;margin:.3rem;width:1.5rem;height:1.5rem;display:inline-block}.day.actionable[data-v-37f15fd0]{cursor:pointer}.day.active[data-v-37f15fd0]{border-color:green}.day.header[data-v-37f15fd0]{color:#adadad;border:0}.day.other-month[data-v-37f15fd0]{visibility:hidden}.day .badge[data-v-37f15fd0]{width:8px;height:8px;background:gold;float:right;border-radius:1em;margin:-3px -3px 1em -8px}", ""]);
+exports.push([module.i, ".calendar-toogler-root[data-v-d5ae1d0a]{font-family:Open Sans,Helvetica,Arial,sans-serif;font-size:16px;display:inline-block;margin:10px}.calendar-toogler-month[data-v-d5ae1d0a]{border:0 solid blue;width:14.3rem;padding:.4rem}.calendar-toogler-week-line[data-v-d5ae1d0a]{display:flex}.calendar-toogler-title[data-v-d5ae1d0a]{font-weight:Bold;padding-left:1rem}.calendar-toogler-day[data-v-d5ae1d0a]{flex:1;font-size:0.75rem;line-height:1.1rem;font-family:Segoe UI,Tahoma,Geneva,Verdana,sans-serif;box-sizing:border-box;justify-self:start;text-align:center;border-radius:1.5rem;border:2px solid #f08080;padding:.1rem;margin:.3rem;width:1.5rem;height:1.5rem;display:inline-block}.calendar-toogler-day.calendar-toogler-actionable[data-v-d5ae1d0a]{cursor:pointer}.calendar-toogler-day.calendar-toogler-active[data-v-d5ae1d0a]{border-color:green}.calendar-toogler-day.calendar-toogler-header[data-v-d5ae1d0a]{color:#adadad;border:0}.calendar-toogler-day.calendar-toogler-other-month[data-v-d5ae1d0a]{visibility:hidden}.calendar-toogler-day .calendar-toogler-badge[data-v-d5ae1d0a]{width:8px;height:8px;background:gold;float:right;border-radius:1em;margin:-3px -3px 1em -8px}", ""]);
 
 // exports
 
@@ -13254,13 +13254,13 @@ process.umask = function() { return 0; };
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-var render = function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('div',{staticClass:"root"},[_c('div',{staticClass:"title"},[_vm._v(_vm._s(_vm.title))]),_vm._v(" "),_c('div',{staticClass:"month"},[_vm._m(0),_vm._v(" "),_vm._l((_vm.weekSet),function(week,i){return _c('div',{key:i,staticClass:"row"},_vm._l((week),function(day){return _c('div',{key:day.id,class:{
-          'appended': true,
-          'day': true,
-          'actionable': true,
-          'active': _vm.dayInSet(day, _vm.activeDates),
-          'other-month': day.monthIndex + 1 !== _vm.month },on:{"click":_vm.clicked,"mouseenter":function (e) { return _vm.hovered(e, 'enter'); },"mouseleave":function (e) { return _vm.hovered(e, 'leave'); }}},[_c('div',{directives:[{name:"show",rawName:"v-show",value:(_vm.dayInSet(day, _vm.badgedDates)),expression:"dayInSet(day, badgedDates)"}],staticClass:"badge"}),_vm._v("\n          "+_vm._s(day.day)+"\n        ")])}),0)})],2)])}
-var staticRenderFns = [function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('div',{staticClass:"row"},[_c('div',{staticClass:"day header"},[_vm._v("D")]),_vm._v(" "),_c('div',{staticClass:"day header"},[_vm._v("S")]),_vm._v(" "),_c('div',{staticClass:"day header"},[_vm._v("T")]),_vm._v(" "),_c('div',{staticClass:"day header"},[_vm._v("Q")]),_vm._v(" "),_c('div',{staticClass:"day header"},[_vm._v("Q")]),_vm._v(" "),_c('div',{staticClass:"day header"},[_vm._v("S")]),_vm._v(" "),_c('div',{staticClass:"day header"},[_vm._v("S")])])}]
+var render = function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('div',{staticClass:"calendar-toogler-root"},[_c('div',{staticClass:"calendar-toogler-title"},[_vm._v(_vm._s(_vm.title))]),_vm._v(" "),_c('div',{staticClass:"calendar-toogler-month"},[_vm._m(0),_vm._v(" "),_vm._l((_vm.weekSet),function(week,i){return _c('div',{key:i,staticClass:"calendar-toogler-week-line"},_vm._l((week),function(day){return _c('div',{key:day.id,class:{
+          'calendar-toogler-appended': true,
+          'calendar-toogler-day': true,
+          'calendar-toogler-actionable': true,
+          'calendar-toogler-active': _vm.dayInSet(day, _vm.activeDates),
+          'calendar-toogler-other-month': day.monthIndex + 1 !== _vm.month },on:{"click":_vm.clicked,"mouseenter":function (e) { return _vm.hovered(e, 'enter'); },"mouseleave":function (e) { return _vm.hovered(e, 'leave'); }}},[_c('div',{directives:[{name:"show",rawName:"v-show",value:(_vm.dayInSet(day, _vm.badgedDates)),expression:"dayInSet(day, badgedDates)"}],staticClass:"calendar-toogler-badge"}),_vm._v("\n          "+_vm._s(day.day)+"\n        ")])}),0)})],2)])}
+var staticRenderFns = [function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('div',{staticClass:"calendar-toogler-week-line"},[_c('div',{staticClass:"calendar-toogler-day calendar-toogler-header"},[_vm._v("D")]),_vm._v(" "),_c('div',{staticClass:"calendar-toogler-day calendar-toogler-header"},[_vm._v("S")]),_vm._v(" "),_c('div',{staticClass:"calendar-toogler-day calendar-toogler-header"},[_vm._v("T")]),_vm._v(" "),_c('div',{staticClass:"calendar-toogler-day calendar-toogler-header"},[_vm._v("Q")]),_vm._v(" "),_c('div',{staticClass:"calendar-toogler-day calendar-toogler-header"},[_vm._v("Q")]),_vm._v(" "),_c('div',{staticClass:"calendar-toogler-day calendar-toogler-header"},[_vm._v("S")]),_vm._v(" "),_c('div',{staticClass:"calendar-toogler-day calendar-toogler-header"},[_vm._v("S")])])}]
 var esExports = { render: render, staticRenderFns: staticRenderFns }
 /* harmony default export */ __webpack_exports__["a"] = (esExports);
 
