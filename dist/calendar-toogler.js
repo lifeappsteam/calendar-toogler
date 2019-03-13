@@ -161,14 +161,16 @@ module.exports = g;
       let simpleDate = new Date(day.year, day.monthIndex, day.day);
       return (set || []).map(d => d.getTime()).indexOf(simpleDate.getTime()) >= 0;
     },
-    clicked(e) {
+    clicked(e, payload) {
       this.$emit('click-day', {
-        target: e.currentTarget
+        target: e.currentTarget,
+        payload
       });
     },
-    hovered(e, hoverType) {
+    hovered(e, hoverType, payload) {
       this.$emit('hover-day', {
         target: e.currentTarget,
+        payload,
         hoverType
       });
     }
@@ -209,7 +211,7 @@ if (typeof window !== 'undefined' && window.Vue) {
 "use strict";
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__babel_loader_node_modules_vue_loader_lib_selector_type_script_index_0_CalendarToogler_vue__ = __webpack_require__(1);
 /* unused harmony namespace reexport */
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__node_modules_vue_loader_lib_template_compiler_index_id_data_v_28251da0_hasScoped_true_buble_transforms_node_modules_vue_loader_lib_selector_type_template_index_0_CalendarToogler_vue__ = __webpack_require__(15);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__node_modules_vue_loader_lib_template_compiler_index_id_data_v_2aa0ebcd_hasScoped_true_buble_transforms_node_modules_vue_loader_lib_selector_type_template_index_0_CalendarToogler_vue__ = __webpack_require__(15);
 function injectStyle (ssrContext) {
   __webpack_require__(4)
 }
@@ -224,12 +226,12 @@ var __vue_template_functional__ = false
 /* styles */
 var __vue_styles__ = injectStyle
 /* scopeId */
-var __vue_scopeId__ = "data-v-28251da0"
+var __vue_scopeId__ = "data-v-2aa0ebcd"
 /* moduleIdentifier (server only) */
 var __vue_module_identifier__ = null
 var Component = normalizeComponent(
   __WEBPACK_IMPORTED_MODULE_0__babel_loader_node_modules_vue_loader_lib_selector_type_script_index_0_CalendarToogler_vue__["a" /* default */],
-  __WEBPACK_IMPORTED_MODULE_1__node_modules_vue_loader_lib_template_compiler_index_id_data_v_28251da0_hasScoped_true_buble_transforms_node_modules_vue_loader_lib_selector_type_template_index_0_CalendarToogler_vue__["a" /* default */],
+  __WEBPACK_IMPORTED_MODULE_1__node_modules_vue_loader_lib_template_compiler_index_id_data_v_2aa0ebcd_hasScoped_true_buble_transforms_node_modules_vue_loader_lib_selector_type_template_index_0_CalendarToogler_vue__["a" /* default */],
   __vue_template_functional__,
   __vue_styles__,
   __vue_scopeId__,
@@ -250,7 +252,7 @@ var content = __webpack_require__(5);
 if(typeof content === 'string') content = [[module.i, content, '']];
 if(content.locals) module.exports = content.locals;
 // add the styles to the DOM
-var update = __webpack_require__(7)("a0eef4c6", content, true, {});
+var update = __webpack_require__(7)("2859f5ee", content, true, {});
 
 /***/ }),
 /* 5 */
@@ -261,7 +263,7 @@ exports = module.exports = __webpack_require__(6)(false);
 
 
 // module
-exports.push([module.i, ".calendar-toogler-root[data-v-28251da0]{font-family:Open Sans,Helvetica,Arial,sans-serif;font-size:16px;display:inline-block;margin:10px}.calendar-toogler-month[data-v-28251da0]{border:0 solid blue;width:199px;padding:10px}.calendar-toogler-week-line[data-v-28251da0]{display:flex}.calendar-toogler-title[data-v-28251da0]{font-weight:Bold;padding-left:16px}.calendar-toogler-day[data-v-28251da0]{flex:1;font-size:10px;line-height:11px;font-family:Segoe UI,Tahoma,Geneva,Verdana,sans-serif;box-sizing:border-box;justify-self:start;text-align:center;border-radius:20px;border:2px solid #f08080;padding:4px;margin:3px;width:20px;height:22px;display:inline-block}.calendar-toogler-day.calendar-toogler-actionable[data-v-28251da0]{cursor:pointer}.calendar-toogler-day.calendar-toogler-active[data-v-28251da0]{border-color:green}.calendar-toogler-day.calendar-toogler-header[data-v-28251da0]{color:#adadad;border:0}.calendar-toogler-day.calendar-toogler-other-month[data-v-28251da0]{visibility:hidden}.calendar-toogler-day .calendar-toogler-badge[data-v-28251da0]{width:8px;height:8px;background:gold;float:right;border-radius:16px;margin:-6px -6px 1em -8px}", ""]);
+exports.push([module.i, ".calendar-toogler-root[data-v-2aa0ebcd]{font-family:Open Sans,Helvetica,Arial,sans-serif;font-size:16px;display:inline-block;margin:10px}.calendar-toogler-month[data-v-2aa0ebcd]{border:0 solid blue;width:199px;padding:10px}.calendar-toogler-week-line[data-v-2aa0ebcd]{display:flex}.calendar-toogler-title[data-v-2aa0ebcd]{font-weight:Bold;padding-left:16px}.calendar-toogler-day[data-v-2aa0ebcd]{flex:1;font-size:10px;line-height:11px;font-family:Segoe UI,Tahoma,Geneva,Verdana,sans-serif;box-sizing:border-box;justify-self:start;text-align:center;border-radius:20px;border:2px solid #f08080;padding:4px;margin:3px;width:20px;height:22px;display:inline-block}.calendar-toogler-day.calendar-toogler-actionable[data-v-2aa0ebcd]{cursor:pointer}.calendar-toogler-day.calendar-toogler-active[data-v-2aa0ebcd]{border-color:green}.calendar-toogler-day.calendar-toogler-header[data-v-2aa0ebcd]{color:#adadad;border:0}.calendar-toogler-day.calendar-toogler-other-month[data-v-2aa0ebcd]{visibility:hidden}.calendar-toogler-day .calendar-toogler-badge[data-v-2aa0ebcd]{width:8px;height:8px;background:gold;float:right;border-radius:16px;margin:-6px -6px 1em -8px}", ""]);
 
 // exports
 
@@ -13259,7 +13261,7 @@ var render = function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._sel
           'calendar-toogler-day': true,
           'calendar-toogler-actionable': true,
           'calendar-toogler-active': _vm.dayInSet(day, _vm.activeDates),
-          'calendar-toogler-other-month': day.monthIndex + 1 !== _vm.month },on:{"click":_vm.clicked,"mouseenter":function (e) { return _vm.hovered(e, 'enter'); },"mouseleave":function (e) { return _vm.hovered(e, 'leave'); }}},[_c('div',{directives:[{name:"show",rawName:"v-show",value:(_vm.dayInSet(day, _vm.badgedDates)),expression:"dayInSet(day, badgedDates)"}],staticClass:"calendar-toogler-badge"}),_vm._v("\n          "+_vm._s(day.day)+"\n        ")])}),0)})],2)])}
+          'calendar-toogler-other-month': day.monthIndex + 1 !== _vm.month },on:{"click":function (e) { return _vm.clicked(e, day.day); },"mouseenter":function (e) { return _vm.hovered(e, 'enter', day.day); },"mouseleave":function (e) { return _vm.hovered(e, 'leave', day.day); }}},[_c('div',{directives:[{name:"show",rawName:"v-show",value:(_vm.dayInSet(day, _vm.badgedDates)),expression:"dayInSet(day, badgedDates)"}],staticClass:"calendar-toogler-badge"}),_vm._v("\n          "+_vm._s(day.day)+"\n        ")])}),0)})],2)])}
 var staticRenderFns = [function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('div',{staticClass:"calendar-toogler-week-line"},[_c('div',{staticClass:"calendar-toogler-day calendar-toogler-header"},[_vm._v("D")]),_vm._v(" "),_c('div',{staticClass:"calendar-toogler-day calendar-toogler-header"},[_vm._v("S")]),_vm._v(" "),_c('div',{staticClass:"calendar-toogler-day calendar-toogler-header"},[_vm._v("T")]),_vm._v(" "),_c('div',{staticClass:"calendar-toogler-day calendar-toogler-header"},[_vm._v("Q")]),_vm._v(" "),_c('div',{staticClass:"calendar-toogler-day calendar-toogler-header"},[_vm._v("Q")]),_vm._v(" "),_c('div',{staticClass:"calendar-toogler-day calendar-toogler-header"},[_vm._v("S")]),_vm._v(" "),_c('div',{staticClass:"calendar-toogler-day calendar-toogler-header"},[_vm._v("S")])])}]
 var esExports = { render: render, staticRenderFns: staticRenderFns }
 /* harmony default export */ __webpack_exports__["a"] = (esExports);

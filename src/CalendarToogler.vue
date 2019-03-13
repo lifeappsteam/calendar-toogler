@@ -20,9 +20,9 @@
             'calendar-toogler-other-month': day.monthIndex + 1 !== month }"
             v-for="day in week"
             :key="day.id"
-            @click='clicked'
-            @mouseenter="(e) => hovered(e, 'enter')"
-            @mouseleave="(e) => hovered(e, 'leave')"
+            @click='(e) => clicked(e, day.day)'
+            @mouseenter="(e) => hovered(e, 'enter', day.day)"
+            @mouseleave="(e) => hovered(e, 'leave', day.day)"
             >
             <div class="calendar-toogler-badge" v-show="dayInSet(day, badgedDates)"></div>
             {{day.day}}
@@ -65,14 +65,16 @@ export default {
       let simpleDate = new Date(day.year, day.monthIndex, day.day)
       return (set || []).map(d => d.getTime()).indexOf(simpleDate.getTime()) >= 0
     },
-    clicked (e) {
+    clicked (e, payload) {
       this.$emit('click-day', {
-        target: e.currentTarget
+        target: e.currentTarget,
+        payload
       })
     },
-    hovered (e, hoverType) {
+    hovered (e, hoverType, payload) {
       this.$emit('hover-day', {
         target: e.currentTarget,
+        payload,
         hoverType
       })
     }
