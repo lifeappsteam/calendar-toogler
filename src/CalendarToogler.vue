@@ -91,8 +91,8 @@ export default {
 </script>
 
 <style lang="less" scoped>
-  @daySize: 20px;
-  @dayPadding: 4px;
+  @daySize: 22px;
+  @dayPadding: 1px;
   @dayMarging: 3px;
   @fontFamily: "Open Sans", Helvetica, Arial, sans-serif;
   @monthPadding: 10px;
@@ -110,6 +110,7 @@ export default {
   }
   .calendar-toogler-week-line {
     display: flex;
+    width: 192px;
   }
   .calendar-toogler-title {
     font-weight: Bold;
@@ -131,10 +132,9 @@ export default {
       visibility: hidden;
     }
     font-size: calc(@daySize * 0.5);
-    line-height: 11px;
+    line-height: calc(@daySize * 0.7);
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     box-sizing: border-box;
-    justify-self: start;
     text-align: center;
     border-radius: @daySize;
     border-width: 2px;
@@ -143,7 +143,9 @@ export default {
     padding: @dayPadding;
     margin: @dayMarging;
     width: @daySize;
-    height: calc(@daySize + 2px);
+    max-width: @daySize;
+    height: @daySize;
+    max-height: @daySize;
     display: inline-block;
     .calendar-toogler-badge {
       width: 8px;
