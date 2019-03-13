@@ -21,8 +21,8 @@
             v-for="day in week"
             :key="day.id"
             @click='(e) => clicked(e, day.day)'
-            @mouseenter="(e) => hovered(e, 'enter', day.day)"
-            @mouseleave="(e) => hovered(e, 'leave', day.day)"
+            @mouseenter="(e) => hovered(e, 'enter', day)"
+            @mouseleave="(e) => hovered(e, 'leave', day)"
             >
             <div class="calendar-toogler-badge" v-show="dayInSet(day, badgedDates)"></div>
             {{day.day}}
