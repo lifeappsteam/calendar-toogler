@@ -20,7 +20,7 @@
             'calendar-toogler-other-month': day.monthIndex + 1 !== month }"
             v-for="day in week"
             :key="day.id"
-            @click='(e) => clicked(e, day.day)'
+            @click='(e) => clicked(e, day)'
             @mouseenter="(e) => hovered(e, 'enter', day)"
             @mouseleave="(e) => hovered(e, 'leave', day)"
             >
