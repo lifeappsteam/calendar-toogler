@@ -211,7 +211,7 @@ if (typeof window !== 'undefined' && window.Vue) {
 "use strict";
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__babel_loader_node_modules_vue_loader_lib_selector_type_script_index_0_CalendarToogler_vue__ = __webpack_require__(1);
 /* unused harmony namespace reexport */
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__node_modules_vue_loader_lib_template_compiler_index_id_data_v_3f7b7f7a_hasScoped_true_buble_transforms_node_modules_vue_loader_lib_selector_type_template_index_0_CalendarToogler_vue__ = __webpack_require__(15);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__node_modules_vue_loader_lib_template_compiler_index_id_data_v_04748553_hasScoped_true_buble_transforms_node_modules_vue_loader_lib_selector_type_template_index_0_CalendarToogler_vue__ = __webpack_require__(15);
 function injectStyle (ssrContext) {
   __webpack_require__(4)
 }
@@ -226,12 +226,12 @@ var __vue_template_functional__ = false
 /* styles */
 var __vue_styles__ = injectStyle
 /* scopeId */
-var __vue_scopeId__ = "data-v-3f7b7f7a"
+var __vue_scopeId__ = "data-v-04748553"
 /* moduleIdentifier (server only) */
 var __vue_module_identifier__ = null
 var Component = normalizeComponent(
   __WEBPACK_IMPORTED_MODULE_0__babel_loader_node_modules_vue_loader_lib_selector_type_script_index_0_CalendarToogler_vue__["a" /* default */],
-  __WEBPACK_IMPORTED_MODULE_1__node_modules_vue_loader_lib_template_compiler_index_id_data_v_3f7b7f7a_hasScoped_true_buble_transforms_node_modules_vue_loader_lib_selector_type_template_index_0_CalendarToogler_vue__["a" /* default */],
+  __WEBPACK_IMPORTED_MODULE_1__node_modules_vue_loader_lib_template_compiler_index_id_data_v_04748553_hasScoped_true_buble_transforms_node_modules_vue_loader_lib_selector_type_template_index_0_CalendarToogler_vue__["a" /* default */],
   __vue_template_functional__,
   __vue_styles__,
   __vue_scopeId__,
@@ -252,7 +252,7 @@ var content = __webpack_require__(5);
 if(typeof content === 'string') content = [[module.i, content, '']];
 if(content.locals) module.exports = content.locals;
 // add the styles to the DOM
-var update = __webpack_require__(7)("699e65c9", content, true, {});
+var update = __webpack_require__(7)("2e48fb64", content, true, {});
 
 /***/ }),
 /* 5 */
@@ -263,7 +263,7 @@ exports = module.exports = __webpack_require__(6)(false);
 
 
 // module
-exports.push([module.i, ".calendar-toogler-root[data-v-3f7b7f7a]{font-family:Open Sans,Helvetica,Arial,sans-serif;font-size:16px;display:inline-block;margin:10px}.calendar-toogler-month[data-v-3f7b7f7a]{border:0 solid blue;width:199px;padding:10px}.calendar-toogler-week-line[data-v-3f7b7f7a]{display:flex}.calendar-toogler-title[data-v-3f7b7f7a]{font-weight:Bold;padding-left:16px}.calendar-toogler-day[data-v-3f7b7f7a]{flex:1;font-size:10px;line-height:11px;font-family:Segoe UI,Tahoma,Geneva,Verdana,sans-serif;box-sizing:border-box;justify-self:start;text-align:center;border-radius:20px;border:2px solid #f08080;padding:4px;margin:3px;width:20px;height:22px;display:inline-block}.calendar-toogler-day.calendar-toogler-actionable[data-v-3f7b7f7a]{cursor:pointer}.calendar-toogler-day.calendar-toogler-active[data-v-3f7b7f7a]{border-color:green}.calendar-toogler-day.calendar-toogler-header[data-v-3f7b7f7a]{color:#adadad;border:0}.calendar-toogler-day.calendar-toogler-other-month[data-v-3f7b7f7a]{visibility:hidden}.calendar-toogler-day .calendar-toogler-badge[data-v-3f7b7f7a]{width:8px;height:8px;background:gold;float:right;border-radius:16px;margin:-6px -6px 1em -8px}", ""]);
+exports.push([module.i, ".calendar-toogler-root[data-v-04748553]{font-family:Open Sans,Helvetica,Arial,sans-serif;font-size:16px;display:inline-block;margin:10px}.calendar-toogler-month[data-v-04748553]{border:0 solid blue;width:192px;padding:10px}.calendar-toogler-week-line[data-v-04748553]{display:flex;width:192px}.calendar-toogler-title[data-v-04748553]{font-weight:Bold;padding-left:16px}.calendar-toogler-day[data-v-04748553]{flex:1;font-size:11px;line-height:15.4px;font-family:Segoe UI,Tahoma,Geneva,Verdana,sans-serif;box-sizing:border-box;text-align:center;border-radius:22px;border:2px solid #f08080;padding:1px;margin:3px;width:22px;max-width:22px;height:22px;max-height:22px;display:inline-block}.calendar-toogler-day.calendar-toogler-actionable[data-v-04748553]{cursor:pointer}.calendar-toogler-day.calendar-toogler-active[data-v-04748553]{border-color:green}.calendar-toogler-day.calendar-toogler-header[data-v-04748553]{color:#adadad;border:0}.calendar-toogler-day.calendar-toogler-other-month[data-v-04748553]{visibility:hidden}.calendar-toogler-day .calendar-toogler-badge[data-v-04748553]{width:8px;height:8px;background:gold;float:right;border-radius:16px;margin:-6px -6px 1em -8px}", ""]);
 
 // exports
 
