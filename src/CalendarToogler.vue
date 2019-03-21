@@ -122,7 +122,7 @@ export default {
       cursor: pointer;
     }
     &.calendar-toogler-active {
-      border-color: green;
+      border-color: #11C829;
     }
     &.calendar-toogler-header {
       color: #adadad;
@@ -138,7 +138,7 @@ export default {
     text-align: center;
     border-radius: @daySize;
     border-width: 2px;
-    border-color: lightcoral;
+    border-color: #FF0000;
     border-style: solid;
     padding: @dayPadding;
     margin: @dayMarging;
@@ -150,13 +150,13 @@ export default {
     .calendar-toogler-badge {
       width: 8px;
       height: 8px;
-      background: gold;
+      background: #FFCF11;
       margin-bottom: 1em;
       float: right;
-      margin-right: -6px;
+      margin-right: -5px;
       border-radius: 16px;
       margin-left: -8px;
-      margin-top: -6px;
+      margin-top: -5px;
     }
   }
 </style>
